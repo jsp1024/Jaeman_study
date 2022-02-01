@@ -1,0 +1,64 @@
+.container {
+    width: 500px;
+    height: 150px;
+}
+
+.left-box {
+    width: 350px;
+    height: 150px;
+    float: left;
+}
+
+.top-box {
+    width: 350px;
+    height: 30px;
+    font-size: 12px;
+}
+
+.blog-img {
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    margin-top: 3px;
+    margin-left: 3px;
+    display: block;
+    border-radius: 5px;
+    float: left;
+}
+
+.blog-name {
+    float: left;
+}
+.blog-name > h4 {
+    margin: 7px;
+    margin-bottom: 0px;
+    font-size: 10px;
+}
+
+.blog-name > p {
+    margin: 7px;
+    margin-top: 0px;
+    font-size: 8px;
+    color: gray;
+}
+
+.bottom-box {
+    width: 350px;
+    height: 120px;
+    float: left;
+}
+
+.right-box {
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+
+.right-box > img {
+    width: 150px;
+    height: 150px;
+}
+
+.footer {
+    clear: both;
+}
