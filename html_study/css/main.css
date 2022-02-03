@@ -59,3 +59,76 @@
     background-color: grey;
     /* clear: both; */
 }
+
+.main-background {
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/shoes.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1px;
+}
+.main-title {
+    color: white;
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    padding: 1px;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
+
+.main-content {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+}
+
+.main-button {
+    -webkit-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    -moz-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    -ms-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    -o-transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    transition: all 200ms cubic-bezier(0.39, 0.5, 0.15, 1.36);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 10px 30px;
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+.main-button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}
+
+.sub-background {
+    width: 400px;
+    height: 200px;
+    background-color: gainsboro;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: -40px;
+    margin: auto;
+    padding: 1px;
+}
+
+.sub-title {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sub-content {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
