@@ -1,5 +1,6 @@
 body {
     height: 1000vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 td {
@@ -41,6 +42,19 @@ table {
     color: white;
     border-radius: 5px;
     border: 0px;
+    cursor: pointer;
+}
+
+.shopping-submit button:hover {
+    background-color: orange;
+}
+
+.shopping-submit button:focus {
+    background-color: black;
+}
+
+.shopping-submit button:active {
+    background-color: red;
 }
 
 .profile {
@@ -204,11 +218,17 @@ table {
 }
 
 .form-name {
-    display: flex;
-    width: 350px;
+    width: 500px;
+}
+
+.first-name {
+    float: left;
+    margin-top: -15px;
+    margin-right: 35px;
 }
 
 .first-name input {
+    width: 150px;
     height: 30px;
     margin-right: 10px;
     border-radius: 5px;
@@ -216,6 +236,7 @@ table {
 }
 
 .last-name input {
+    width: 150px;
     height: 30px;
     margin-right: 10px;
     border-radius: 5px;
@@ -237,4 +258,84 @@ table {
     display: block;
     margin-left: auto;
     margin-top: -23px;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: tomato;
+    align-items: center;
+    font-size: 26px;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__column--title {
+    font-style: italic;
+}
+
+.navbar__column {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar__column:nth-child(2) {
+    flex-grow: 2;
+}
+
+.navbar__column:nth-child(3) {
+    display: flex;
+}
+
+.navbar__column--content {
+    margin-left: 20px;
+}
+
+.service {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.service__menu {
+    text-align: center;
+    float: left;
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+.service__menu--icon {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: burlywood;
+    color: white;
+}
+
+.service__menu--title {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-title {
+        font-size: 30px;
+    }
+    .service__menu {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service__menu {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
