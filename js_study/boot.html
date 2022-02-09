@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+            crossorigin="anonymous"
+        />
+
+        <link rel="stylesheet" href="main.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
+
+        <title>Hello, world!</title>
+    </head>
+    <body>
+        <div class="black-background">
+            <div class="white-background">
+                <p>asdasd</p>
+                <form action="login.php">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" id="email" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" />
+                    </div>
+                    <button type="submit" class="btn btn-primary">전송</button>
+                    <button type="button" class="btn btn-secondary" id="close">닫기</button>
+                </form>
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <h4>Sea Studio</h4>
+            <a id="nav-sub-button">Products</a>
+        </nav>
+        <ul class="list-group nav-sub">
+            <li class="list-group-item">Boat</li>
+            <li class="list-group-item">Swimming</li>
+            <li class="list-group-item">Food</li>
+        </ul>
+        <div class="jumbotron main-background">
+            <h1 class="display-4">Sea Studio</h1>
+            <p class="lead">
+                This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or
+                information.
+            </p>
+            <hr class="my-4" />
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" id="login" href="#" role="button">Login</a>
+        </div>
+
+        <script>
+            $("form").on("submit", function (e) {
+                if ($("#email").val() == "") {
+                    e.preventDefault();
+                    console.log("fail");
+                }
+            });
+
+            $("#login").click(function () {
+                $(".black-background").fadeIn();
+            });
+
+            $("#close").click(function () {
+                $(".black-background").fadeOut();
+            });
+
+            $("#nav-sub-button").click(function () {
+                $(".nav-sub").slideToggle();
+            });
+        </script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
