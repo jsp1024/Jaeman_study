@@ -6,5 +6,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
-    <body></body>
+    <body>
+        <button id="button">버튼</button>
+        <script>
+            document.getElementById("button").addEventListener("click", function (e) {
+                // console.log(this);
+                var array = [1, 2, 3];
+                array.forEach(function (a) {
+                    console.log(this);
+                });
+            });
+
+            var obj = {
+                x: () => {
+                    return this;
+                },
+            };
+
+            obj.x();
+
+            var 사람 = () => {
+                (this.name = "손흥민"), (this.sayHi = "안녕 나는" + name);
+            };
+
+            사람.sayHi();
+
+            // var obj = {
+            //     names: ["김", "이", "박"],
+            //     x: function () {
+            //         obj.names.forEach(() => {
+            //             console.log(this);
+            //         });
+            //     },
+            // };
+            // obj.x();
+        </script>
+    </body>
 </html>

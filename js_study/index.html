@@ -6,17 +6,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="./main.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
-        <div class="alert-box" id="alert">Alert 박스<button onclick="alert_close()">닫기</button></div>
-        <button onclick="alert_open()">버튼</button>
+        <p class="greeting">안녕하세요</p>
+        <p class="greeting">안녕하세요</p>
+        <p class="greeting">안녕하세요</p>
+
+        <button class="btn">버튼</button>
+        <button class="btn">버튼</button>
+        <button class="btn">버튼</button>
         <script>
-            function alert_open() {
-                document.getElementById("alert").style.display = "block";
-            }
-            function alert_close() {
-                document.getElementById("alert").style.display = "none";
-            }
+            $(".greeting").eq(0).html("안녕");
+
+            $(".btn").on("click", function () {
+                $(".greeting").eq(1).html("안녕안녕");
+            });
+
+            $(".btn").on("click", function () {
+                $(".greeting").eq(2).slideUp();
+            });
         </script>
     </body>
 </html>
