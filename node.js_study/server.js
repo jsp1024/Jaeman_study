@@ -8,19 +8,16 @@ app.set("view engine", "ejs");
 
 var db;
 const MongoClient = require("mongodb").MongoClient;
-MongoClient.connect(
-    "mongodb+srv://jsp1024:osjm1858@cluster0.nwuj0.mongodb.net/testapp?retryWrites=true&w=majority",
-    function (err, client) {
-        if (err) {
-            return console.log(err);
-        }
-        db = client.db("testapp");
-
-        app.listen(8080, function () {
-            console.log("clear");
-        });
+MongoClient.connect("mongodb+srv://jsp1024:osjm1858@cluster0.nwuj0.mongodb.net/testapp?retryWrites=true&w=majority", function (err, client) {
+    if (err) {
+        return console.log(err);
     }
-);
+    db = client.db("testapp");
+
+    app.listen(8080, function () {
+        console.log("clear");
+    });
+});
 
 app.get("/pet", function (req, res) {
     res.send("asdfasdf");
@@ -39,7 +36,12 @@ app.get("/write.html", function (req, res) {
 });
 
 app.get("/list", function (req, res) {
-    res.render("list.ejs");
+    db.collection("post")
+        .find()
+        .toArray(function (err, 결과) {
+            console.log(결과);
+            res.render("list.ejs", { posts: 결과 });
+        });
 });
 
 app.post("/add", function (req, res) {
