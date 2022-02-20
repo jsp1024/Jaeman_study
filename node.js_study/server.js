@@ -45,10 +45,13 @@ app.get("/list", function (req, res) {
 });
 
 app.post("/add", function (req, res) {
-    console.log(req.body.date);
-    console.log(req.body.title);
-    db.collection("post").insertOne({ 제목: req.body.title, 날짜: req.body.date }, function (err, res) {
-        console.log("저장완료");
+    db.collection("counter").findOne({ name: "게시물갯수" }, function (err, res) {
+        console.log(res.totalPost);
+        let totalBoard = res.totalPost;
+        db.collection("post").insertOne({ _id: totalBoard + 1, 제목: req.body.title, 날짜: req.body.date }, function (err, res) {
+            console.log("저장완료");
+        });
     });
+
     res.send("전송완료");
 });
