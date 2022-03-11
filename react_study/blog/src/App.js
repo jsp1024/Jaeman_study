@@ -7,6 +7,8 @@ function App() {
     let [good,good_count] = useState(0)
     let posts = "오늘저녘 머먹지";
 
+    let [modal,modal_change] = useState(false);
+
     function title_sort(){
         let newArray = [...title];
         newArray.sort((a,b) => a.localeCompare(b));
@@ -40,8 +42,12 @@ function App() {
                 <p>아자차카타파하</p>
                 <hr/>
             </div>
-
-            <Modal />
+            <button onClick = { () => {modal_change(!modal)}} >aaa</button>
+            {
+                modal === true
+                    ? <Modal />
+                    : null
+            }
         </div>
     );
 }
