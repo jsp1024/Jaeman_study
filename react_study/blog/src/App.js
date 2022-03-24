@@ -27,36 +27,34 @@ function App() {
                 <div><button onClick={title_sort}>변경</button></div>
                 <hr/>
             </div>
-            <div className="list">
-                <h3>{title[1]}</h3>
-                <p>맛있는 짜장면</p>
-                <hr/>
-            </div>
-            <div className="list">
-                <h3>{title[2]}</h3>
-                <p>아침밥 먹고싶다아</p>
-                <hr/>
-            </div>
-            <div className="list">
-                <h3>{title[3]}</h3>
-                <p>아자차카타파하</p>
-                <hr/>
-            </div>
-            <button onClick = { () => {modal_change(!modal)}} >aaa</button>
+
+            {
+                title.map((a) => {
+                    return (
+                        <div className="list">
+                        <h3>{a}</h3>
+                        <p>아침밥 먹고싶다아</p>
+                        <hr/>
+                    </div>
+                    )
+                })
+            }
+
+            <button onClick = { () => {modal_change(!modal)}} >열고닫기</button>
             {
                 modal === true
-                    ? <Modal />
+                    ? <Modal title={title}/>
                     : null
             }
         </div>
     );
 }
 
-function Modal(){
+function Modal(props){
     return(
         <div>
             <div className="modal">
-            <h2>제목</h2>
+            <h2>{props.title[0]}</h2>
             <p>날짜</p>
             <p>상세내용</p>
             </div>
